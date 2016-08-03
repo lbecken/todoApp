@@ -21,14 +21,23 @@
         'ui.router',
 
         // Custom application modules
+        'app.servicesConfiguration',
         'app.todo'
     ])
-      .constant('$CONFIG', {
-        'serverUrl': 'localhost:9000'
-      })
-    .run(function($state) {
-      // go to "todo" page
-      $state.go('todo');
-    });
+    .config(['$httpProvider', function($httpProvider) {
+      $httpProvider.interceptors.push(['$q', function($q) {
+        return {
+          'responseError': function(rejection) {
+            // reject
+            Materialize.toast('response error', 1000, 'red');
+            return $q.reject(rejection);
+          }
+        }
+      }]);
+    }])
+    .run(['$state', function($state) {
+        // go to "todo" page
+        $state.go('todo');
+    }]);
 
 })();

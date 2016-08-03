@@ -10,9 +10,9 @@
         .module('app.todo')
         .factory('ToDo', ToDo);
     
-    ToDo.$inject = ['$resource','$CONFIG'];
-    function ToDo($resource, $CONFIG) {
-        return $resource('http://' + $CONFIG['serverUrl'] + '/todo/:id',{id:'@id'},{
+    ToDo.$inject = ['$resource','SERVICES_CONFIG'];
+    function ToDo($resource, SERVICES_CONFIG) {
+        return $resource('http://' + SERVICES_CONFIG['serverUrl'] + '/todo/:id',{id:'@id'},{
             update: {
                 method: 'PUT'
             }
