@@ -1,0 +1,47 @@
+label {
+    font-size: 18px;
+}
+
+a.container {
+    background-color: #26a69a;
+}
+
+.form-group label {
+    font-size: 20px;
+}
+
+.field-group {
+    padding: 20px;
+}
+
+.nav-logo {
+    margin-left: 10px;
+}
+
+
+.todo-item.row {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+textarea {
+    font-size: 0.825rem;
+    line-height: 1.6;
+}
+
+.btn-add-todo {
+    bottom: 54px;
+}
+
+/* sticky footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+

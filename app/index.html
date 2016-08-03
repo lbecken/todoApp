@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="todo app">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/app.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="app">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<header class="navbar-fixed">
+  <nav class="z-depth-0" role="navigation">
+    <div class="nav-wrapper">
+      <div class="col s12 ">
+        <span class="nav-logo"><i class="fa fa-file-text fa-2x"></i></span>
+        <span>ToDo</span>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="container">
+  <div ui-view></div>
+</main>
+<footer class="page-footer fixed">
+  <div class="footer-copyright">
+    <div class="container">
+      <span class="left">© 2016 Copyright</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="../bower_components/jquery/dist/jquery.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-resource/angular-resource.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="../bower_components/materialize/dist/js/materialize.js"></script>
+<script src="../bower_components/angular-materialize/src/angular-materialize.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="features/todoList/todo.module.js"></script>
+<script src="features/todoList/config.route.js"></script>
+<script src="features/todoList/mockBackend.js"></script>
+<script src="features/todoList/mockServerModel.js"></script>
+<script src="features/todoList/todo.service.js"></script>
+<script src="features/todoList/todo.controller.js"></script>
+<script src="scripts/app.js"></script>
+<!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div>
+    <h3>ToDo</h3>
+    <div class="input-field">
+        <a class="btn-floating" ui-sref="newTodo" ng-click="vm.save()" title="Add"><i class="fa fa-plus"></i></a>
+    </div>
+    <div ng-if="vm.todoList.length > 0">
+        <div class="todo-item input-field row" ng-repeat="item in vm.todoList">
+            <div class="col s12 m3">{{item.title}}</div>
+            <div class="col s12 m7">{{item.description}}</div>
+            <div class="col s12 m2">
+                <div class="right">
+                <a class="btn-floating" ui-sref="viewTodo({id:item._id})" title="View"><i class="fa fa-file-text"></i></a>
+                <a class="btn-floating" ui-sref="editTodo({id:item._id})" title="Edit"><i class="fa fa-pencil"></i></a>
+                <a class="btn-floating" ng-click="vm.remove(item)" title="Delete"><i class="fa fa-trash"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-if="vm.todoList.length == 0">
+        List is empty
+    </div>
+</div>

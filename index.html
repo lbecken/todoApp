@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="todo app">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css">
+  <link rel="stylesheet" href="app/styles/material-icons.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="app/styles/app.css">
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.) styles/main.css -->
+  <link rel="stylesheet" href="app/styles/app.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="app">
+
+
+<!-- Add your site or application content here -->
+<header class="navbar-fixed">
+  <nav class="z-depth-0" role="navigation">
+    <div class="nav-wrapper">
+      <div class="col s12 ">
+        <span class="nav-logo"><i class="fa fa-file-text fa-2x"></i></span>
+        <span>ToDo</span>
+      </div>
+    </div>
+  </nav>
+</header>
+<main class="container">
+  <div ui-view></div>
+</main>
+<footer class="page-footer fixed">
+  <div class="footer-copyright">
+    <div class="container">
+      <span class="left">© 2016 Copyright</span>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/materialize/dist/js/materialize.js"></script>
+<script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/scripts.js -->
+<script src="app/features/todoList/todo.module.js"></script>
+<script src="app/features/todoList/config.route.js"></script>
+<script src="app/features/todoList/mockBackend.js"></script>
+<script src="app/features/todoList/mockServerModel.js"></script>
+<script src="app/features/todoList/todo.service.js"></script>
+<script src="app/features/todoList/todo.controller.js"></script>
+<script src="app/scripts/app.js"></script>
+<!-- endbuild -->

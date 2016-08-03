@@ -1,0 +1,26 @@
+<!--nav class="z-depth-0">
+    <div class="nav-wrapper">
+        <div class="col s12">
+            <a ui-sref="todo" class="breadcrumb">ToDo</a>
+            <span class="breadcrumb">Details</span>
+        </div>
+    </div>
+</nav-->
+<h3>Details</h3>
+<div class="field-group">
+    <label class="col s2">Title</label>
+    <div class="col s10">
+        <span>{{vm.todo.title}}</span>
+    </div>
+</div>
+<div class="field-group">
+    <label class="col s2">Description</label>
+    <div class="col s10">
+        <span>{{vm.todo.description}}</span>
+    </div>
+</div>
+
+<div>
+    <a class="btn-floating" ui-sref="todo"><i class="fa fa-chevron-left fa-2x"></i></a>
+    <a class="btn-floating" ui-sref="editTodo({id:vm.todo._id})" title="Edit"><i class="fa fa-pencil fa-2x"></i></a>
+</div>
